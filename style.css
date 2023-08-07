@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+html {
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter";
+}
+
+.product-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+/* .........................heading......................... */
+.horizontal-line {
+  position: relative;
+}
+
+.horizontal-line::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #c8c8c8;
+  position: absolute;
+  top: 50%;
+  left: -71%;
+  right: 2px;
+  margin: 0 auto;
+  width: 94px;
+}
+
+.horizontal-line::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #c8c8c8;
+  position: absolute;
+  top: 50%;
+
+  right: 2px;
+  margin: 0 auto;
+  width: 94px;
+}
+
+.horizontal-line::before {
+  transform: translateY(-50%);
+}
+
+.horizontal-line::after {
+  transform: translateY(50%);
+}
+
+h5 {
+  font-family: Metropolis;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #007f61;
+}
+
+p {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+/* ..............................box-1.................................. */
+.border-box {
+  width: 340px;
+  height: 74px;
+  border: 1px solid #c8c8c8;
+  border-radius: 4px;
+}
+.box1-per {
+  margin-left: auto;
+  padding-right: 20px;
+  padding-top: 5px;
+}
+
+/* ......................................box-2................................ */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding-left: 5px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white; /* Set white background */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-content li {
+  padding: 4px;
+  font-family: Inter;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.dropdown button::after {
+  content: "\25BE"; /* Unicode down arrow character */
+  margin-left: 20px;
+  font-size: 12px;
+}
+
+.box-2 {
+  width: 340px;
+  height: 161px;
+  border: 1px solid #007f61;
+  border-radius: 4px;
+  background-color: #f4fbf9;
+  margin-top: 7px;
+}
+
+.box-2content {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.popular{
+  margin-left: auto;
+  padding-right: 40px;
+  color: #007f61;
+}
+
+.size-typ {
+  display: flex;
+  align-items: center;
+}
+
+.size-typ2 {
+  display: flex;
+  align-items: center;
+  padding-top: 7px;
+}
+
+.btn {
+  width: 65px;
+  height: 25px;
+  border: 1px solid #d9d9d9;
+  background-color: #ffffff;
+  font-family: Inter;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.number {
+  font-family: Inter;
+  font-size: 9px;
+  font-weight: 400;
+  line-height: 11px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-right: 3px;
+}
+
+.pair-2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+
+.product-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.size-box {
+  margin-left: 46px;
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-left: 7px;
+}
+
+.dropdown-section {
+  margin-left: 35px;
+  padding-top: 5px;
+}
+
+.second-heading {
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+}
+
+.cross {
+  font-family: Inter;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #9f9f9f;
+}
+
+.left {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 18px;
+  margin-left: 6px;
+}
+.right {
+  margin-left: 53px;
+}
+.per {
+  font-family: Inter;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  font-family: Metropolis;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 13px;
+  letter-spacing: 0em;
+  text-align: left;
+  padding-left: 18px;
+}
+
+.radio-btn {
+  position: absolute;
+  top: 38%;
+  left: 38%;
+}
+
+.radio {
+  color: #007f61;
+}
+/* <!-- ..................Bottom-text............................. --> */
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+/* ...............................ADD TO CART............................ */
+.btn-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+.add-to-cart {
+  background-color: #007f61;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 341px;
+}
+
+.plus-icon::before {
+  content: "+";
+  font-weight: bold;
+}
+
+/* Style for the message */
+.message {
+  display: none;
+  margin-top: 10px;
+  color: green;
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 24px;
+}
+
+/* ................................responsive.................................... */

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>proway</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <style>
+      .green-radio {
+        color: green;
+      }
+
+      /* Style for the container of paragraphs */
+      .paragraph-container {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding-top: 20px;
+        margin-left: 23px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- .......................card-box................. -->
+    <section class="product-cart">
+      <div class="container">
+        <div class="horizontal-line">
+          <h5>Bundle & Save</h5>
+        </div>
+        <div class="border-box">
+          <div class="paragraph-container">
+            <input type="radio" name="radio" class="green-radio" />
+            <p>1 Pair</p>
+            <p class="box1-per">50% off</p>
+          </div>
+          <!-- Second row with a single paragraph -->
+          <p style="margin-left: 14%; padding-top: 5px">DKK 195.00</p>
+        </div>
+        <!-- ....................box-2...................... -->
+        <div class="box-2">
+          <div class="box-2content">
+           <label> <input type="radio" name="radio" class="radio" /></label>
+            <p style="padding-left: 40px;">2 Pair</p>
+            <p class="popular">Most popular</p>
+          </div>
+
+          <div class="right">
+            <span>DKK 345.00</span>
+            <span class="cross" style="margin-left: 21px"
+              ><s>DKK 195.00</s></span
+            >
+            <span class="per">40% OFF</span>
+          </div>
+          <div class="size-box" style="display: flex">
+            <p class="second-heading">size</p>
+            <p class="second-heading" style="padding-left: 46px">colour</p>
+          </div>
+          <section class="dropdown-section">
+            <div class="size-typ">
+              <span class="number">#1</span>
+              <!-- ....drop-dwon..... -->
+              <div class="dropdown">
+                <button class="btn">S</button>
+                <div class="dropdown-content">
+                  <ul>
+                    <li>M</li>
+                    <li>L</li>
+                    <li>XL</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="btn">Colour</button>
+                <div class="dropdown-content">
+                  <ul>
+                    <li>RED</li>
+                    <li>GREEN</li>
+                    <li>BLACK</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="size-typ2">
+              <p class="number">#2</p>
+              <!-- ....drop-dwon..... -->
+              <div class="dropdown">
+                <button class="btn">S</button>
+                <div class="dropdown-content">
+                  <ul>
+                    <li>M</li>
+                    <li>L</li>
+                    <li>XL</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="btn">Colour</button>
+                <div class="dropdown-content">
+                  <ul>
+                    <li>RED</li>
+                    <li>GREEN</li>
+                    <li>BLACK</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- ...................drop-down-end................. -->
+        </div>
+        <!-- ..............................box-3..................... -->
+        <div class="border-box" style="margin-top: 6px">
+          <div class="paragraph-container">
+            <input type="radio" name="radio" class="green-radio" />
+            <p>3 Pair</p>
+            <p class="box1-per">60% off</p>
+          </div>
+          <!-- Second row with a single paragraph -->
+          <p style="margin-left: 14%; padding-top: 5px">DKK 528.00</p>
+        </div>
+        <!-- ..................Bottom-text............................. -->
+        <div class="total-amount">
+          <p style="color: #007f61">Free 2 Day Shipping</p>
+          <p>Total : DKK 360.00</p>
+        </div>
+        <!-- ........................ADD TO CART.......................... -->
+        <div class="btn-1">
+          <button class="add-to-cart">Add to Cart</button>
+          <p class="message" id="message"></p>
+        </div>
+      </div>
+    </section>
+    <script>
+      const addToCartButton = document.querySelector(".add-to-cart");
+      const messageElement = document.getElementById("message");
+
+      addToCartButton.addEventListener("click", () => {
+        messageElement.textContent = "Thank you for shopping!";
+        messageElement.style.display = "block";
+      });
+    </script>
+    <!-- Code injected by live-server -->
+    <script>
+      // <![CDATA[  <-- For SVG support
+      if ("WebSocket" in window) {
+        (function () {
+          function refreshCSS() {
+            var sheets = [].slice.call(document.getElementsByTagName("link"));
+            var head = document.getElementsByTagName("head")[0];
+            for (var i = 0; i < sheets.length; ++i) {
+              var elem = sheets[i];
+              var parent = elem.parentElement || head;
+              parent.removeChild(elem);
+              var rel = elem.rel;
+              if (
+                (elem.href && typeof rel != "string") ||
+                rel.length == 0 ||
+                rel.toLowerCase() == "stylesheet"
+              ) {
+                var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, "");
+                elem.href =
+                  url +
+                  (url.indexOf("?") >= 0 ? "&" : "?") +
+                  "_cacheOverride=" +
+                  new Date().valueOf();
+              }
+              parent.appendChild(elem);
+            }
+          }
+          var protocol =
+            window.location.protocol === "http:" ? "ws://" : "wss://";
+          var address =
+            protocol + window.location.host + window.location.pathname + "/ws";
+          var socket = new WebSocket(address);
+          socket.onmessage = function (msg) {
+            if (msg.data == "reload") window.location.reload();
+            else if (msg.data == "refreshcss") refreshCSS();
+          };
+          if (
+            sessionStorage &&
+            !sessionStorage.getItem("IsThisFirstTime_Log_From_LiveServer")
+          ) {
+            console.log("Live reload enabled.");
+            sessionStorage.setItem("IsThisFirstTime_Log_From_LiveServer", true);
+          }
+        })();
+      } else {
+        console.error(
+          "Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading."
+        );
+      }
+      // ]]>
+    </script>
+  </body>
+</html>
